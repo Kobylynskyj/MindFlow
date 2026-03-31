@@ -1,4 +1,6 @@
+@use '../../base/Variables.scss' as *;
 .wellcome_section{
+    width: 100%;
     margin: 10rem auto;
     max-width: 87rem;
     height: 86rem;
@@ -15,7 +17,7 @@
 .title_section{
     font-size: 47px;
     line-height: 1.5;
-    color: #01996D;;
+    color: $color-primary;
 }
 
 .text_subtitle{

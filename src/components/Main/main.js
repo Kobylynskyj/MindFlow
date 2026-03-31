@@ -1,5 +1,6 @@
 const welcomeSection = {
     text:"How it works",
+    title:"Understand & Release the stress in 3 steps",
     subTitle:"Alivio offers as many journals it takes, tackling different areas such as anxiety, overwhelmedness, sadness, or anger, and a variety of personal causes, to help you become aware of your emotions, and guide you in how to manage stress.",
     titleNavigition:"Personalize",
     subtitleNevigation: "Answer a quick survey about how you express yourself, what causes you stress, and what area  would you like to work on. This way, we can fully personalize your journal!",

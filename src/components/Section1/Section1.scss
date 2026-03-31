@@ -1,8 +1,9 @@
+@use '../../base/Variables.scss' as *;
 .section_stories{
     display: grid;
     align-items: center;
     width: 100%;
-    background-color: #245852;
+    background-color: $color-primary-section1;
     height: 600px;
     padding: 20px;
 }
@@ -31,7 +32,7 @@
 
 .stories_btn{
     border: none;
-    background-color: #01996D;
+    background-color: $color-primary;
     height: 50px;
     width: 30%;
     color: #fff;
@@ -46,6 +47,6 @@
 
 .stories_video img{
     opacity: 0.9;
-    max-width: 600px;
+    width: 100%;
     height: 370px;
 }

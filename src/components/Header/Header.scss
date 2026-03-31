@@ -1,4 +1,4 @@
-
+@use '../../base/Variables.scss' as *;
 
 .Header{
     display: flex;
@@ -18,7 +18,7 @@
     color: black;
     &:hover{
         cursor: pointer;
-        color: #01996D;
+        color: $color-primary;
     }
     }
 }
@@ -44,7 +44,7 @@
 }
 
 .Start_Trial{
-    background-color: #01996D;
+    background-color: $color-primary;
     border: none;
     width: 10rem;
     border-radius: 3px;
@@ -81,7 +81,7 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color: #01996D;
+    color: $color-primary;
 }
 
 .header_subtitle{
@@ -98,7 +98,7 @@
     border: none;
     max-width: 13.10rem;
     height: 3.2rem;
-    background-color: #01996D;
+    background-color: $color-primary;
     border-radius: 3px;
     font-size: 15px;
     color: #FFFFFF;
