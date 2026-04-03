@@ -13,9 +13,13 @@ const createLinks = () =>{
 
 
 export const Footer = () => {
-    return /*HTML*/ `
+    return  `
     <div class="Footer">
-     <nav class="Footer_nav">${createLinks()}</nav>
+    <div class="Footer_content">
+    
+    <h1 class="Alivio_footer">Alivio</h1>
+    <nav class="Footer_nav">${createLinks()}</nav>
+    </div>
     </div>
     `
 

@@ -1,19 +1,8 @@
 
 import logo from "../../../public/logo.svg"
-
-const links = [
-    {name : "Home", link : "/"},
-    {name : "About Us", link : "/about"},
-    {name : "Community", link : "/community"},
-    {name : "Pricing", link : "#"},
-]
+import { Nav } from "./Nav/Nav"
 
 
-const createLinks = () =>{
-    return links.map((element) => 
-        `<a href="${element.link}">${element.name}<a>`
-    ).join("")
-} 
 
 const btnSingIn = "Sing in"
 const btnStartTrial = "Start Trial"
@@ -23,13 +12,13 @@ const title = "Be aware, Manage well."
 const subTitle = "Everyone experiences stress in different ways. Let Alivio guide you, in a personalized journal experience, to overcome your stress."
 const btnPrimary ="Find Your Way" 
 
-export const Header = () => {
+export const Header = (currentPath) => {
     return `
     <header class="Header">
     
     <img src="${logo}" alt="">
-    <nav class="Header_nav">${createLinks()}</nav>
-    
+    ${Nav(currentPath)}
+
     <div class="header_block_btn">
     <button class="button_sing_in">${btnSingIn}</button>
     <button class="Start_Trial">${btnStartTrial}</button>

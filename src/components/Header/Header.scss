@@ -19,7 +19,19 @@
     &:hover{
         cursor: pointer;
         color: $color-primary;
-    }
+    }   
+}
+}
+.nav_links{
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 5px;
+    &.active{
+        background-color: $color-primary;
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
     }
 }
 

@@ -1,5 +1,33 @@
 @use '../../base/Variables.scss' as *;
+@use '../../base/Mixins.scss' as *;
+
+
 
 .Footer{
+    display: flex;
+    background-color: $color-primary-bg;
+    @include width-content;
+    padding: 25px;
+    
+}
+.Footer_content{
+@include flex-center;
+margin-left: 30px;
+}
+.Footer_nav{
+@include flex-center;
+padding: 10px;
+gap: 20px;
 
+}
+.Footer_nav a {
+    font-size: 17px;
+    color: #fff;
+    &:hover{
+        color: $color-primary;
+    }
+}
+
+.Alivio_footer{
+    color: #fff;
 }

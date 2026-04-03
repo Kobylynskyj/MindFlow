@@ -3,10 +3,10 @@ import { InitRouter } from './Router'
 import './style.css'
 
 
-const renderApp = (Page) => {
+const renderApp = (Page,currentPath) => {
 
     document.querySelector('#app').innerHTML = `
-    ${Header()}
+    ${Header(currentPath)}
     ${Main(Page)}
     ${Footer()}
     `
