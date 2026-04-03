@@ -1,9 +1,9 @@
-@use '../../base/Variables.scss' as *;
+@use '../../../base/Variables.scss' as *;
 .section_stories{
     display: grid;
     align-items: center;
     width: 100%;
-    background-color: $color-primary-section1;
+    background-color: $color-primary-bg;
     height: 600px;
     padding: 20px;
 }

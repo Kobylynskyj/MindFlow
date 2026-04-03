@@ -6,10 +6,9 @@ const Section2Text = {
 }
 
 
-
-export const Section2 = () => {
+export const Section3 = () => {
     return`
-     <section class="section_product_intro">
+         <section class="section_product_intro">
         <div class="section_our_product">
         
         <div class="avtar_img"></div>
@@ -23,6 +22,5 @@ export const Section2 = () => {
         </div>
         
         </section>
-
     `
 }

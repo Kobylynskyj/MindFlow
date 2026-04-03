@@ -2,16 +2,16 @@
 import logo from "../../../public/logo.svg"
 
 const links = [
-    {name : "Why Alivio", link : "#"},
-    {name : "Solutions", link : "#"},
-    {name : "Community", link : "#"},
+    {name : "Home", link : "/"},
+    {name : "About Us", link : "/about"},
+    {name : "Community", link : "/community"},
     {name : "Pricing", link : "#"},
 ]
 
 
 const createLinks = () =>{
     return links.map((element) => 
-        `<a href="${createLinks.links}">${element.name}<a>`
+        `<a href="${element.link}">${element.name}<a>`
     ).join("")
 } 
 

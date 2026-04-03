@@ -1,18 +1,19 @@
-
-import { Main } from './components/Main'
-import { Header } from './components/Header'
+import {Header,Main,Footer} from './components'
+import { InitRouter } from './Router'
 import './style.css'
-import { Section1 } from './components/Section1'
-import { Section2 } from './components'
 
 
+const renderApp = (Page) => {
 
-
-document.querySelector('#app').innerHTML = `
+    document.querySelector('#app').innerHTML = `
     ${Header()}
-    ${Main()}
-    ${Section1()}
-    ${Section2()}
-`
+    ${Main(Page)}
+    ${Footer()}
+    `
+    
+}  
+
+InitRouter(renderApp)
+
 
 
