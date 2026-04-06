@@ -1,3 +1,7 @@
+export { initModalLogic } from "./Header/Module";
+
+export { Modal } from "./Header/Module";
+
 export { Footer } from "./Footer";
 
 export { Section1 } from "../pages/Home/Section1";

@@ -1,0 +1,116 @@
+@use "../../../base/Mixins.scss" as *;
+@use "../../../base/Variables.scss" as *;
+
+.Hero_About{
+@include grid-custom;
+background-color: $color-about-hero;
+@include width-content;
+height: 800px;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
+
+.Map{
+    display: grid;
+    align-items: center;
+    height: 500px;
+    max-width: 350px;
+
+}
+.text{
+    margin-bottom: 15%;
+    width: 100%;
+    height: 125px;
+}
+
+.text_p{
+    text-align: center;
+    padding: 5px;
+    font-size: 24px;
+
+}
+
+.title_h1{
+@include style_text($size:47px, $height:1.2, $weight:700);
+font-family: $main-font;
+color: $color-black-green;
+font-style: italic;
+
+}
+
+.content_Hero{
+    display: flex;
+    justify-content: center;
+max-width: 400px;
+height: 450px;
+}
+
+.first_content_Hero{
+    display: grid;
+    
+    height: 450px;
+}
+
+.first_content{
+    display: grid;
+    padding: 10px;
+    height: 200px;
+    
+}
+
+.title_first_block{
+    @include style_text($aling:left, $size:47px, $height:1.2, $weight:700);
+    font-family: $main-font;
+    font-style: italic;
+    color: $color-black-green;
+}
+
+.subtitle_first_block{
+    @include style_text($aling:left, $size:18px, $height:1.2, $weight:500);
+    letter-spacing: 1px;
+}
+
+
+
+.second_content_Hero{
+    margin-top: 20px;
+    height: 300px;
+}
+
+.second_content{
+    display: grid;
+    padding: 10px;
+    height: 200px;
+    max-width: 400px;
+}
+
+.title_second_block{
+    @include style_text($aling:left, $size:47px, $height:1.2, $weight:700);
+    font-family: $main-font;
+    font-style: italic;
+    max-width: 400px;
+    color: $color-black-green;
+}
+
+.subtitle_second_block{
+    @include style_text($aling:left, $size:18px, $height:1.2, $weight:500);
+    max-width: 300px;
+    letter-spacing: 1px;
+}
+
+.third_content_Hero{
+    margin-top: 20px;
+height: 200px;
+}
+
+.title_third_block{
+    @include style_text($aling:left, $size:50px, $height:1.2, $weight:700);
+    letter-spacing: 1.2px;
+    
+}
+
+.subtitle_third_block{
+    @include style_text($aling:left, $size:47px, $height:1.2, $weight:700);
+    color: $color-black-green;
+}

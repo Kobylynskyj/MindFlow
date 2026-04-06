@@ -1,0 +1,80 @@
+@use '../../../base/Mixins.scss' as *;
+@use '../../../base/Variables.scss' as *;
+.modal-overlay{
+@include modal;
+background-color: $color-modal-black;
+z-index: 9999;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #edeef6;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#reg-form{
+    width: 100%;
+}
+
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #333;
+    border: none;
+
+}
+
+.modal-title{
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+
+.input-group{
+    margin-bottom: 15px;
+}
+
+#email{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-top: 7px;
+}
+
+.submit-btn{
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    width: 40%;
+    cursor: pointer;
+    &:hover{
+        background-color: #edeef6;
+    }
+}
+

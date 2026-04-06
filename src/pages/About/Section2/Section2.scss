@@ -1,0 +1,49 @@
+@use "../../../base/Mixins.scss" as *;
+@use "../../../base/Variables.scss" as *;
+
+.Section{
+    background-color: $color-black-green;
+    @include width-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 400px;
+}
+
+
+
+.FutureCards{
+    margin-top: 20px;
+    height: 100px;
+    max-width: 250px;
+}
+.Future_text{
+    color: #fff;
+    font-size: 17px
+}
+.Future_title{
+    @include style_text($aling:left,$size:47px,$height:1.2, $weight:700,);
+    color: #fff;
+    margin-top: 10px;
+}
+
+.Section_cards{
+    @include grid;
+    height: 250px;
+}
+.title_cards{
+    @include style_text($aling:left,$size:39px,$height:1.1, $weight:700,);
+    font-family: $main-font;
+    font-style: italic;
+    color: #fff;
+    width: 100%;
+}
+
+.text_cards{
+    @include style_text($aling:left,$size:17px,$height:1, $weight:500,);
+    margin-top: 20px;
+    font-style: italic;
+    color: white;
+}

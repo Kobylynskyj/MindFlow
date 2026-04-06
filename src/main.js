@@ -1,4 +1,4 @@
-import {Header,Main,Footer} from './components'
+import {Header,Main,Footer,Modal,initModalLogic,} from './components'
 import { InitRouter } from './Router'
 import './style.css'
 
@@ -9,11 +9,12 @@ const renderApp = (Page,currentPath) => {
     ${Header(currentPath)}
     ${Main(Page)}
     ${Footer()}
+    ${Modal()}
     `
     
+    initModalLogic()
 }  
 
 InitRouter(renderApp)
-
 
 

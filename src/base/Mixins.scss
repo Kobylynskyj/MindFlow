@@ -1,16 +1,56 @@
+// Flex
 @mixin flex-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+// Гибкий grid
+@mixin grid-custom($gap: 16px) {
+  display: grid;
+  grid-template-columns: 400px 500px ;
+  gap: $gap;
+}
+
+@mixin grid($gap: 16px) {
+  display: grid;
+  grid-template-columns: 360px 360px 360px ;
+  gap: $gap;
+}
+
+// Content
 @mixin width-content {
     width: 100%;
     height: 450px;
 }
 
-@mixin font-text  {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
+// Text
+@mixin style_text ($aling:center,$size:15px,$height:20px, $weight:300,) {
+    text-align: $aling;
+    font-size: $size; 
+    line-height: $height;
+    font-weight: $weight;
+}
+
+// Кнопка
+@mixin button($bg:#01996D , $color: #fff) {
+  background-color: $bg;
+  color: $color;
+  border-radius: 3px;
+  border: none;
+  
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+@mixin modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
