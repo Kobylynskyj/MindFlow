@@ -1,0 +1,45 @@
+@use '../../../base/Variables.scss' as *;
+@use '../../../base/Mixins.scss' as *;
+
+.section_3{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: row;
+    width: 100%;
+    height: 420px;
+    background-color: $color-setcion3-div;
+    padding: 10px;
+}
+
+.container_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    height: 300px;
+    padding: 10px;
+}
+
+
+.title{
+@include style_text ($aling:left,$size:17px,$height:20px, $weight:500,);
+}
+
+.subtitle{
+    @include style_text ($aling:left,$size:45px,$height:40px, $weight:700,);
+    letter-spacing: 1.3px;
+    color: $color-primary;
+    margin-top: 10px;
+}
+
+.image_container img {
+    border-radius: 8px;
+    box-shadow: 5px 10px 15px black;
+    max-width: 500px;
+    height: 350px;
+    &:hover{
+        opacity: 0.8;
+        
+    }
+}
