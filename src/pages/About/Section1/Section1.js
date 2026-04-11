@@ -24,16 +24,16 @@ export const Section1 = () => {
     
     <div class="content_Hero">
 
+    
+    
+    
+    <div class="second_content_Hero">
+    
     <div class="first_content_Hero">
     <div class="first_block">
     <h2 class="title_first_block">${AboutHero.titlefirst}</h2>
     <p class="subtitle_first_block">${AboutHero.subtitleFirst}</p>
     </div>
-
-
-     
- <div class="second_content_Hero">
-
     <div class="second_block">
     <h2 class="title_second_block">${AboutHero.titleSecond}</h2>
     <p class="subtitle_second_block">${AboutHero.subtitleSecond}</p>

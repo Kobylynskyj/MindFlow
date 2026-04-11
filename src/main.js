@@ -1,5 +1,6 @@
-import {Header,Main,Footer,Modal,initModalLogic,} from './components'
+import {Header,Main,Footer,Modal,initModalLogic, initBurger,} from './components'
 import { InitRouter } from './Router'
+
 import './style.css'
 
 
@@ -13,6 +14,7 @@ const renderApp = (Page,currentPath) => {
     `
     
     initModalLogic()
+    initBurger()
 }  
 
 InitRouter(renderApp)

@@ -1,4 +1,3 @@
-
 import logo from "../../../public/logo.svg"
 import { Nav } from "./Nav/Nav"
 
@@ -20,7 +19,7 @@ export const Header = (currentPath) => {
     <button id="open-modal" class="button_sing_in">${btnSingIn}</button>
     <button class="Start_Trial">${btnStartTrial}</button>
     </div>
-
+    
     </header>
     
     

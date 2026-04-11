@@ -3,17 +3,17 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: auto;
     width: 100%;
-    padding: 10px;
+    padding: 80px 20px;
 }
 
 .section_our_product{
     display: grid;
-    grid-template-columns: 500px 580px;
+    grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
     padding: 10px;
+    max-width: 900px;
     gap: 20px;
-    height: 450px;
 }
 
 .avtar_img{
@@ -29,7 +29,7 @@
 .section_product_title{
     margin-top: 60px;
     max-width: 570px;
-    height: 400px;
+    height: auto;
     padding: 10px;
 }
 
@@ -65,4 +65,24 @@
         cursor: pointer;
         opacity: 0.9;
     }
+}
+
+@media (max-width:1200px) {
+    .section_product_intro{
+    height: auto;
+
+    .avtar_img{
+    height: 400px;
+}
+}
+}
+
+
+
+@media (max-width:859px) {
+.section_our_product{
+
+    grid-template-columns: 1fr;
+
+}
 }

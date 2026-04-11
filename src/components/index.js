@@ -1,3 +1,5 @@
+export { initBurger } from "./Header/Menu_Burger";
+
 export { initModalLogic } from "./Header/Module";
 
 export { Modal } from "./Header/Module";
