@@ -22,60 +22,57 @@ export const Modal = () => {
 };
 
 export const initModalLogic = () => {
-    const modal = document.querySelector('#auth-modal')
-    const openBtn = document.querySelector('#open-modal')
-    const closeBtn = document.querySelector('#close-modal')
-    const body = document.body
+    const modal = document.querySelector('#auth-modal');
+    const closeBtn = document.querySelector('#close-modal');
+    const body = document.body;
+    
+    
+    const allSignInButtons = document.querySelectorAll('.button_sing_in');
+    const savedEmail = localStorage.getItem('userEmail');
 
-    const savedEmail = localStorage.getItem('userEmail')
-    if(savedEmail && openBtn){
-        openBtn.textContent = savedEmail
-    }
+    allSignInButtons.forEach(btn => {
 
-    if(openBtn && modal && closeBtn){
-        openBtn.onclick = () => {
-            modal.style.display = 'flex';
-            body.style.overflow = 'hidden';
+        if (savedEmail) {
+            btn.textContent = savedEmail;
+        }
 
-        };
-        
-        const form = document.querySelector('form')
-        const inputEmeil = document.querySelector('input[type="email"]')
-        const inputPasssword = document.querySelector('input[type="password"]')
-        if(form){
-            form.onsubmit = (event) => {
-                event.preventDefault()
-                const emailValue = inputEmeil.value
-                const passwordValue = inputPasssword.value
-                
-                if(!emailValue.includes("@")) {
-                    alert("Please enter valid email.")
-                    return;
-                }
-
-                if(passwordValue.length < 6 ) {
-                    alert("The password must be longer that 6")
-                    return;
-                }
-                localStorage.setItem('userEmail', emailValue)
-                openBtn.textContent = emailValue
-                alert("Email saved")
-
-                
-                
+        btn.onclick = () => {
+            if (modal) {
+                modal.style.display = 'flex';
+                body.style.overflow = 'hidden';
             }
-        }
+        };
+    });
 
+    if (closeBtn && modal) {
         closeBtn.onclick = () => {
-            modal.style.display = 'none'
-            body.style.overflow = 'auto'
-        }
-
-        window.onclick = (event) => {
-        if(event.target === modal) {
-            modal.style.display = 'none'
-            body.style.overflow = 'auto'
-        }
-        }
+            modal.style.display = 'none';
+            body.style.overflow = 'auto';
+        };
     }
-}
+
+
+    const form = document.querySelector('form');
+    if (form) {
+        form.onsubmit = (event) => {
+            event.preventDefault();
+            const inputEmail = document.querySelector('input[type="email"]');
+            
+            if (inputEmail) {
+                const emailValue = inputEmail.value;
+                
+                // Зберігаємо в пам'ять
+                localStorage.setItem('userEmail', emailValue);
+                
+                // ОНОВЛЮЄМО ТЕКСТ НА ВСІХ КНОПКАХ ОДНОЧАСНО
+                allSignInButtons.forEach(btn => {
+                    btn.textContent = emailValue;
+                });
+
+                modal.style.display = 'none';
+                body.style.overflow = 'auto';
+                alert("Email saved!");
+            }
+        };
+    }
+};

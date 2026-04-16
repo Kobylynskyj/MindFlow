@@ -1,2 +1,0 @@
-export { initBurger } from "./Burger";
-

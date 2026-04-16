@@ -12,7 +12,6 @@ const renderApp = (Page,currentPath) => {
     ${Footer()}
     ${Modal()}
     `
-    
     initModalLogic()
     initBurger()
 }  
